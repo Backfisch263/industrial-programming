@@ -1,1 +1,2 @@
-print(Hello, this is my first commit of a .py-file in this repo.)
+n = 42
+print(f"Hello, this is my commit number {n} of a .py-file in this repo.")
