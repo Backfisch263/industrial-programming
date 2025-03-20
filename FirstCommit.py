@@ -18,16 +18,18 @@ def fish():
         print("Really? I highly TROUT that! See what I did there?")
     elif fishy == "Catfish":
         print("Catfish? Highly suspicious.")
+    elif fishy == "Eel":
+        print("What a funky choice.")
     else:
         print(fishy + "? That sounds disgusting!")
     return
 
 
-TopFishes = ["Salmon", "Bass", "Dolphin", "Trout", "Catfish"]
+TopFishes = ["Salmon", "Bass", "Dolphin", "Trout", "Catfish", "Eel"]
 
 
 def guessgame(fishlist):
-    fishpick = sample(fishlist, 3)
+    fishpick = sample(fishlist, k=3)
     favorite = choice(fishpick)
     print(f"Can you also guess my favorite fish?\nIt's one of these: {fishpick}")
     fishguess = input("Insert your choice here: ")
@@ -35,6 +37,7 @@ def guessgame(fishlist):
         print("That's correct! Have you been through my personal stuff?")
     else:
         print(f"No, why would I even remotely like {fishguess}?!")
+    return
 
 
 fish()
