@@ -5,7 +5,11 @@ print(f"There are {c} contributors in this file.")
 
 def fish():
     fishy = input("What is your favorite fish? Insert here: ")
-    print(fishy + "? That sounds disgusting!")
+    rating = input("How would you rate it from 1 to 10? Insert here: ")
+    if int(rating) >= 5:
+        print(fishy + "? That sounds delicious!")
+    else:
+        print(fishy + "? That sounds disgusting!")
     return
 
 fish()
