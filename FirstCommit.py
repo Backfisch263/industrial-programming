@@ -29,7 +29,6 @@ TopFishes = ["Salmon", "Bass", "Dolphin", "Trout", "Catfish"]
 def guessgame(fishlist):
     fishpick = sample(fishlist, 3)
     favorite = choice(fishpick)
-    print(favorite)
     print(f"Can you also guess my favorite fish?\nIt's one of these: {fishpick}")
     fishguess = input("Insert your choice here: ")
     if fishguess == favorite:
