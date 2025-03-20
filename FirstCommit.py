@@ -37,6 +37,7 @@ def guessgame(fishlist):
         print("That's correct! Have you been through my personal stuff?")
     else:
         print(f"No, why would I even remotely like {fishguess}?!")
+    return
 
 
 fish()
