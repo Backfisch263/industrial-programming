@@ -28,8 +28,13 @@ def fish():
 TopFishes = ["Salmon", "Bass", "Dolphin", "Trout", "Catfish", "Eel"]
 
 
-def guessgame(fishlist):
-    fishpick = sample(fishlist, k=3)
+def guessgame(fishlist:list, sample_size:int = 3):
+
+    if len(fishlist) >= sample_size:
+        fishpick = sample(fishlist, k=sample_size)
+    else:
+        raise ValueError(f"The length of the input list ({len(fishlist)}) cannot be smaller than the chosen sample size ({sample_size}).")
+
     favorite = choice(fishpick)
     print(f"Can you also guess my favorite fish?\nIt's one of these: {fishpick}")
     fishguess = input("Insert your choice here: ")
@@ -42,3 +47,6 @@ def guessgame(fishlist):
 
 fish()
 guessgame(TopFishes)
+
+# test of the new functionality of guessgame() --> it will raise a ValueError with the defined error message
+guessgame(["Shark", "Trout", "Salmon"], sample_size=4)
